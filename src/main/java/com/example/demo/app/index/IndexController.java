@@ -11,6 +11,14 @@ public class IndexController {
     
     @GetMapping
     public String index(Model model){
+        SampleForm sampleForm = new SampleForm();
+        sampleForm.setInput("This is input value");
+        sampleForm.setCheckbox1(true);
+        sampleForm.setCheckbox2(false);
+        sampleForm.setRadio(2);
+        sampleForm.setSelect(1);
+
+        model.addAttribute("sampleForm", sampleForm);
         return "index";
     }
 }
