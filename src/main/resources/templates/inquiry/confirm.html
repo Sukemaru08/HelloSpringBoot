@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloSpringBoot</title>
+</head>
+<body>
+<h1>お問い合わせ内容の確認</h1>
+<!-- object="${sampleForm}"のsampleFormはIndexControllerのconfirmメソッドの引数 -->
+<div th:object="${sampleForm}">
+    <div>
+        <label for="name">お名前</label><br />
+        <p th:text="*{name}"></p>
+    </div>
+
+    <div>
+        <label for="email">メールアドレス</label><br />
+        <p th:text="*{email}">email</p>
+    </div>
+
+    <div>
+        <label for="contents">お問い合わせ内容</label><br />
+        <p th:text="*{contents}">contents</p>
+    </div>
+</div>
+</body>
+</html>
